@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { HeroSection } from './components/HeroSection';
 import { CoverageBar } from './components/CoverageBar';
+import { PartnersSection } from './components/PartnersSection';
 import { AboutSection } from './components/AboutSection';
 import { ServicesSection } from './components/ServicesSection';
 import { GallerySection } from './components/GallerySection';
@@ -81,6 +82,9 @@ export function App() {
 
         {/* Services Section */}
         <ServicesSection />
+
+        {/* Partners Marquee Section (Dark Mode) */}
+        <PartnersSection />
 
         {/* Gallery Section with Category Filter */}
         <GallerySection onOpenLightbox={handleOpenLightbox} />

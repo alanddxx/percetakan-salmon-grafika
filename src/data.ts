@@ -1,7 +1,7 @@
 import { GalleryItem, ServiceItem } from './types';
 
-export const WHATSAPP_NUMBER = '6282114493163';
-export const PHONE_DISPLAY = '0821-1449-3163';
+export const WHATSAPP_NUMBER = '6289671279047';
+export const PHONE_DISPLAY = '0896-7127-9047';
 
 export function getWhatsAppUrl(customMessage?: string): string {
   const text = customMessage || 'Halo Percetakan Salmon Grafika Utama, saya ingin konsultasi cetak';

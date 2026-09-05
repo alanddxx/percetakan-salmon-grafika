@@ -44,26 +44,22 @@ export const Header: React.FC<HeaderProps> = ({ activeSection }) => {
           {/* Brand & Profile */}
           <a
             href="#"
-            className="flex items-center gap-4 group focus:outline-none"
-            aria-label="Salmon Grafika Utama Beranda"
+            className="flex items-center gap-3 group focus:outline-none"
+            aria-label="Salmon Grafika Beranda"
           >
             <div className="relative flex-shrink-0">
               <img
-                alt="Salmon Grafika Utama Logo"
+                alt="Salmon Grafika Logo"
                 className="w-10 h-10 rounded-full object-contain bg-white ring-2 ring-[#0037b0]/20 group-hover:ring-[#0037b0] transition-all"
                 src={LOGO_URL}
                 referrerPolicy="no-referrer"
               />
-              <span className="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full bg-[#b61722] ring-2 ring-[#faf8ff]"></span>
             </div>
             <div className="flex flex-col justify-center">
-              <div className="flex items-center gap-2">
-                <span className="text-xl sm:text-2xl text-[#0037b0] tracking-tight font-bold group-hover:text-[#1d4ed8] transition-colors">
-                  Salmon Grafika Utama
-                </span>
-                <span className="w-1.5 h-1.5 rounded-full bg-[#b61722] hidden sm:inline-block"></span>
-              </div>
-              <span className="text-[11px] uppercase tracking-wider font-bold text-[#434655]">
+              <span className="text-xl sm:text-2xl text-[#0037b0] tracking-tight font-bold group-hover:text-[#1d4ed8] transition-colors leading-snug">
+                Salmon Grafika
+              </span>
+              <span className="text-[9px] uppercase tracking-wider font-bold text-[#434655]">
                 Percetakan Presisi & Cepat
               </span>
             </div>
@@ -130,7 +126,7 @@ export const Header: React.FC<HeaderProps> = ({ activeSection }) => {
           <div className="flex items-center gap-2 sm:gap-3">
             <a
               className="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-[#006b2e] hover:bg-[#005021] text-white text-sm font-semibold rounded-xl transition-all shadow-[0_4px_14px_0_rgba(0,107,46,0.25)] min-h-[44px] touch-manipulation hover:scale-[1.02] active:scale-[0.98]"
-              href={getWhatsAppUrl('Halo Percetakan Salmon Grafika Utama, saya ingin konsultasi cetak')}
+              href={getWhatsAppUrl('Halo Percetakan Salmon Grafika, saya ingin konsultasi cetak')}
               rel="noopener noreferrer"
               target="_blank"
               title="Konsultasi WhatsApp"
@@ -232,7 +228,7 @@ export const Header: React.FC<HeaderProps> = ({ activeSection }) => {
         <div className="flex flex-col gap-3 pt-6 border-t border-[#eaedff]">
           <a
             className="flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl bg-[#006b2e] hover:bg-[#005021] text-white text-sm font-bold shadow-md transition-colors min-h-[44px]"
-            href={getWhatsAppUrl('Halo Percetakan Salmon Grafika Utama, saya ingin konsultasi cetak')}
+            href={getWhatsAppUrl('Halo Percetakan Salmon Grafika, saya ingin konsultasi cetak')}
             rel="noopener noreferrer"
             target="_blank"
             onClick={closeMobileMenu}
