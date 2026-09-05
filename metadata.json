@@ -1,0 +1,6 @@
+{
+  "name": "Percetakan Salmon Grafika Utama",
+  "description": "Layanan Percetakan Offset & Digital Presisi di Jakarta Pusat, spesialis formulir NCR, undangan eksklusif, continuous form, brosur, dan kemasan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
