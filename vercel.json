@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "salmongrafika.vercel.app"
+        }
+      ],
+      "destination": "https://salmongrafika.site/$1",
+      "permanent": true
+    }
+  ]
+}
