@@ -17,18 +17,26 @@ export const Header: React.FC<HeaderProps> = ({ activeSection }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(prev => !prev);
-    if (!mobileMenuOpen) {
+  useEffect(() => {
+    if (mobileMenuOpen) {
       document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden'; // For iOS Safari
     } else {
       document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
     }
+    return () => {
+      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(prev => !prev);
   };
 
   const closeMobileMenu = () => {
     setMobileMenuOpen(false);
-    document.body.style.overflow = '';
   };
 
   return (
@@ -156,7 +164,7 @@ export const Header: React.FC<HeaderProps> = ({ activeSection }) => {
       {/* Mobile Drawer Navigation */}
       <div
         id="mobile-menu-drawer"
-        className={`fixed inset-y-0 right-0 w-full max-w-xs bg-white/85 backdrop-blur-2xl shadow-2xl border-l border-[#eaedff] z-50 flex flex-col justify-between p-6 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed inset-y-0 right-0 w-full max-w-xs bg-white/85 backdrop-blur-2xl shadow-2xl border-l border-[#eaedff] z-[70] flex flex-col justify-between p-6 transform transition-transform duration-300 ease-in-out ${
           mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -249,7 +257,7 @@ export const Header: React.FC<HeaderProps> = ({ activeSection }) => {
       {/* Backdrop */}
       {mobileMenuOpen && (
         <div
-          className="fixed inset-0 bg-[#131b2e]/50 backdrop-blur-sm z-40 transition-opacity"
+          className="fixed inset-0 bg-[#131b2e]/50 backdrop-blur-sm z-[60] transition-opacity"
           onClick={closeMobileMenu}
         />
       )}
