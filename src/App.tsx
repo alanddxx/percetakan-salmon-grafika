@@ -38,6 +38,15 @@ export function App() {
   };
 
   useEffect(() => {
+    // Mencegah browser mengembalikan posisi scroll ke bawah saat di-refresh
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    // Paksa scroll ke paling atas (beranda) saat halaman pertama kali dimuat
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     const handleScroll = () => {
       const sections = ['tentang-kami', 'layanan', 'galeri', 'kontak'];
       const scrollPos = window.scrollY + 200;

@@ -36,8 +36,8 @@ export const Header: React.FC<HeaderProps> = ({ activeSection }) => {
       <header
         className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ${
           scrolled
-            ? 'bg-[#faf8ff]/95 backdrop-blur-xl border-b border-[#eaedff] shadow-[0_4px_20px_rgba(0,0,0,0.06)]'
-            : 'bg-[#faf8ff]/90 backdrop-blur-xl border-b border-[#eaedff] shadow-[0_1px_8px_rgba(0,0,0,0.04)]'
+            ? 'bg-[#faf8ff]/75 backdrop-blur-lg border-b border-[#eaedff] shadow-[0_4px_20px_rgba(0,0,0,0.06)]'
+            : 'bg-[#faf8ff]/50 backdrop-blur-md border-b border-transparent'
         }`}
       >
         <div className="h-20 max-w-[1280px] mx-auto px-5 lg:px-12 flex items-center justify-between gap-4">
@@ -156,7 +156,7 @@ export const Header: React.FC<HeaderProps> = ({ activeSection }) => {
       {/* Mobile Drawer Navigation */}
       <div
         id="mobile-menu-drawer"
-        className={`fixed inset-y-0 right-0 w-full max-w-xs bg-white shadow-2xl border-l border-[#eaedff] z-50 flex flex-col justify-between p-6 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed inset-y-0 right-0 w-full max-w-xs bg-white/85 backdrop-blur-2xl shadow-2xl border-l border-[#eaedff] z-50 flex flex-col justify-between p-6 transform transition-transform duration-300 ease-in-out ${
           mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
